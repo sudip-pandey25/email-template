@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maskulin Email Template</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: 'Dilemma';
+            src: url('/fonts/dilemma/Dilemma-SerifMediumXP.otf') format('opentype');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .email-container {
+            max-width: 580px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #ffffff;
+            padding: 30px 30px 30px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-right: 2px;
+            filter: invert(41%) sepia(27%) saturate(231%) hue-rotate(87deg) brightness(90%) contrast(85%);
+            animation: logoAnimation 6s ease-in-out infinite;
+        }
+
+        @keyframes logoAnimation {
+
+            0%,
+            45% {
+                opacity: 0;
+            }
+
+            50%,
+            95% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+
+        }
+
+        .brand-section {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 0;
+        }
+
+        .brand-name {
+            font-size: 45px;
+            font-family: 'Dilemma', serif;
+            display: flex;
+            align-items: center;
+            font-weight: 300;
+            color: #2c5530;
+            letter-spacing: -0.5px;
+            line-height: 1;
+            padding-right: 20px;
+            opacity: 0;
+            animation: brandNameAnimation 6s ease-in-out infinite;
+        }
+
+        @keyframes brandNameAnimation {
+
+            0%,
+            45% {
+                opacity: 1;
+            }
+
+            50%,
+            95% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .animation-part {
+            position: relative;
+            display: flex;
+            height: 80px;
+            border-right: 2px solid #d0d0d0;
+            align-items: center;
+            gap: 20px;
+
+
+            >.logo {
+                position: absolute;
+                top: 50%;
+                left: 20%;
+                transform: translateY(-50%);
+                opacity: 1;
+                transition: transform 0.3s ease-in-out;
+            }
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .name {
+            font-size: 24px;
+            margin-bottom: 4px;
+            font-weight: 500;
+            color: #2c5530;
+            line-height: 1.2;
+        }
+
+        .title {
+            font-size: 16px;
+            color: #999999;
+            line-height: 1.3;
+        }
+
+        .website {
+            font-size: 16px;
+            color: #999999;
+            text-decoration: none;
+            line-height: 1.3;
+        }
+
+        .website:hover {
+            color: #2c5530;
+            text-decoration: underline;
+        }
+
+        .content {
+            padding: 40px 50px;
+        }
+
+        .greeting {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        .message {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333333;
+            margin-bottom: 30px;
+        }
+
+        .signature-section {
+            border-top: 1px solid #e5e5e5;
+            padding-top: 25px;
+        }
+
+        .signature-text {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 15px;
+        }
+
+        .signature-brand {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .signature-logo {
+            font-size: 20px;
+            font-weight: 300;
+            color: #2c5530;
+            border-right: 1px solid #d0d0d0;
+            padding-right: 20px;
+        }
+
+        .signature-details {
+            font-size: 14px;
+            color: #999999;
+            line-height: 1.4;
+        }
+
+        .footer {
+            background-color: #f8f8f8;
+            padding: 30px 50px;
+            text-align: center;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .footer-text {
+            font-size: 12px;
+            color: #999999;
+            line-height: 1.5;
+        }
+
+        /* Mobile responsiveness */
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .header,
+            .content,
+            .footer {
+                padding: 30px 25px;
+            }
+
+            .brand-section {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .brand-name {
+                font-size: 32px;
+                border-right: none;
+                border-bottom: 2px solid #d0d0d0;
+                padding-right: 0;
+                padding-bottom: 15px;
+                margin-bottom: 5px;
+            }
+
+            .signature-brand {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .signature-logo {
+                border-right: none;
+                border-bottom: 1px solid #d0d0d0;
+                padding-right: 0;
+                padding-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email-container">
+        <!-- Header with brand and contact info -->
+        <div class="header">
+            <div class="brand-section">
+                <div class="animation-part" id="animation-part">
+                    <div class="brand-name">
+                        <p>Maskulin.</p>
+                    </div>
+                    <img src="./example.png" alt=""
+                        style="filter: invert(41%) sepia(27%) saturate(231%) hue-rotate(87deg) brightness(90%) contrast(85%);"
+                        id="logo" class="logo" />
+                </div>
+
+
+
+                <div class="contact-info">
+                    <div class="name">Arthur Kuipers</div>
+                    <div class="title">Founding Partner / Managing Director</div>
+                    <a href="https://www.maskulin.com" class="website">www.maskulin.com</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content area
+        <div class="content">
+            <div class="greeting">Hello [Name],</div> -->
+
+        <!-- <div class="message">
+                I hope this email finds you well. I wanted to reach out to discuss potential collaboration opportunities and how Maskulin can support your upcoming projects.
+                <br><br>
+                Our team specializes in delivering innovative solutions that drive results. I'd love to schedule a brief call to explore how we can work together.
+                <br><br>
+                Please let me know your availability for next week, and I'll send over a calendar invite.
+            </div> -->
+
+        <!-- Email signature -->
+        <!-- <div class="signature-section">
+                <div class="signature-text">Best regards,</div>
+                <div class="signature-brand">
+                    <div class="signature-logo">Maskulin.</div>
+                    <div class="signature-details">
+                        Arthur Kuipers<br>
+                        Founding Partner / Managing Director<br>
+                        www.maskulin.com
+                    </div>
+                </div>
+            </div> -->
+    </div>
+
+    <!-- Footer -->
+    <!-- <div class="footer">
+            <div class="footer-text">
+                This email was sent by Maskulin. If you no longer wish to receive these emails, 
+                you can <a href="#" style="color: #2c5530;">unsubscribe here</a>.
+            </div>
+        </div> -->
+    </div>
+</body>
+
+</html>
